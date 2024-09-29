@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h2{
+    background-color: aliceblue;
+    color: brown;
+    padding: 10px;
+}
