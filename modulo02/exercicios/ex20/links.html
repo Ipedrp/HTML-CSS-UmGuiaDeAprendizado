@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Element</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a{
+            color: rgb(110, 21, 21);
+            text-decoration: none;
+        }
+
+        a:hover{
+            color: brown;
+            text-decoration: underline;
+        }
+
+        a:visited{
+            color: #ff0505;
+            text-decoration: underline;
+        }
+
+        a:active{
+            background-color: yellow;
+            color: black;
+        }
+        
+        .especial::after{
+            content: ' [link especial]';
+            color: lightgray;
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1>Veja os links</h1>
+    <ul>
+        <li>
+            <a href="https://open.spotify.com/intl-pt" target="_blank" >Acesse o Spotify</a>
+        </li>
+        <li>
+            <a href="https://www.youtube.com/" target="_blank" class="especial">Acesse o Youtube</a>
+        </li>
+        <li>
+            <a href="https://www.facebook.com/" target="_blank">Acesse o Facebook</a>
+        </li>
+    </ul>
+
+</body>
+
+</html>

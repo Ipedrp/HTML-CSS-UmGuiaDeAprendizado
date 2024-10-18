@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonte Externas</title>
+    <style>
+        /*
+        TIPOS DE format()
+
+        - opentype (otf).
+        - truetype (ttf).
+        - embedded-opentype.
+        - truetype aat (Apple Advanced Typography).
+        - svg.
+
+        */
+
+        @font-face {
+            font-family: 'Hangover';
+            src: url(fontes/Hangover.otf) format(opentype);
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'love';
+            src: url(fontes/love\ story\ ttf.ttf) format(truetype);
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        h1 {
+            font-family: 'Hangover', Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h2 {
+            font-family: 'love', Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            font-style: normal;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Trabalhando com fontes externas</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae in voluptatem saepe aut, consequatur, natus harum
+        nesciunt reprehenderit aliquam eligendi praesentium nisi rerum, labore deserunt doloribus. In voluptatum enim
+        aliquam? çLorem, ipsum dolor sit amet consectetur adipisicing elit. Ut mollitia dolor culpa dicta labore, et
+        totam earum excepturi ea, provident placeat ad error quisquam quibusdam? Corporis qui et recusandae eaque! Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Ea culpa nesciunt, qui ullam ab corporis obcaecati repellat,
+        voluptates amet beatae molestias eos cum vel doloribus consequuntur quia architecto! Provident, sed.</p>
+    <h2>Um novo subtitulo</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione consequatur modi eius vero ad sint nesciunt
+        veniam id laboriosam impedit. Enim doloribus aspernatur officiis! Dolorem, nulla! Error suscipit dolore tenetur!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam repellat atque minima in, voluptatibus
+        reiciendis amet et officia sunt tenetur eos asperiores harum repudiandae, dignissimos veniam placeat itaque? Ad,
+        necessitatibus. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia accusantium similique iusto
+        placeat sapiente adipisci culpa quibusdam magnam accusamus distinctio fugiat reiciendis minima debitis quis
+        ipsum perferendis quaerat, eligendi soluta!</p>
+
+</body>
+
+</html>
