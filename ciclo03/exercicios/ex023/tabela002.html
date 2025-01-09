@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    table{
+        width: 400px;
+        border-collapse: collapse;
+        position: relative;
+    }
+
+    caption{
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 10px;
+        background-color: lightgray;
+
+    }
+    thead > tr > th{
+        position: sticky;
+        top: 0;
+        background-color: gray;
+
+    }
+    
+    thead, tfoot{
+        background-color: gray;
+        color: white;
+    }
+
+    tbody > tr:nth-child(even){
+        background-color: lightgray;
+    }
+
+    th, td{
+        border: 1px solid black;
+        padding: 10px;
+    }
+
+    td{
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>Tabelas grandes</h1>
+
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        TABLE 
+            CAPTION
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+    -->
+
+    <table>
+        <caption>Populacão das cidades</caption>
+        <thead>
+            <tr>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 50px;">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>São Paulo</td>
+                <td>44.3424.392</td>
+            </tr>
+            <tr>
+                <td>Tucano</td>
+                <td>45.342</td>
+            </tr>
+            <tr>
+                <td>Araci</td>
+                <td>62.942</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>44.3424.392</td>
+            </tr>
+            <tr>
+                <td>Tucano</td>
+                <td>45.342</td>
+            </tr>
+            <tr>
+                <td>Araci</td>
+                <td>62.942</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>44.3424.392</td>
+            </tr>
+            <tr>
+                <td>Tucano</td>
+                <td>45.342</td>
+            </tr>
+            <tr>
+                <td>Araci</td>
+                <td>62.942</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>44.3424.392</td>
+            </tr>
+            <tr>
+                <td>Tucano</td>
+                <td>45.342</td>
+            </tr>
+            <tr>
+                <td>Araci</td>
+                <td>62.942</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>44.3424.392</td>
+            </tr>
+            <tr>
+                <td>Tucano</td>
+                <td>45.342</td>
+            </tr>
+            <tr>
+                <td>Araci</td>
+                <td>62.942</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>44.3424.392</td>
+            </tr>
+            <tr>
+                <td>Tucano</td>
+                <td>45.342</td>
+            </tr>
+            <tr>
+                <td>Araci</td>
+                <td>62.942</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>44.3424.392</td>
+            </tr>
+            <tr>
+                <td>Tucano</td>
+                <td>45.342</td>
+            </tr>
+            <tr>
+                <td>Araci</td>
+                <td>62.942</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>44.3424.392</td>
+            </tr>
+            <tr>
+                <td>Tucano</td>
+                <td>45.342</td>
+            </tr>
+            <tr>
+                <td>Araci</td>
+                <td>62.942</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>44.3424.392</td>
+            </tr>
+            <tr>
+                <td>Tucano</td>
+                <td>45.342</td>
+            </tr>
+            <tr>
+                <td>Araci</td>
+                <td>62.942</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>44.3424.392</td>
+            </tr>
+            <tr>
+                <td>Tucano</td>
+                <td>45.342</td>
+            </tr>
+            <tr>
+                <td>Araci</td>
+                <td>62.942</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>44.3424.392</td>
+            </tr>
+            <tr>
+                <td>Tucano</td>
+                <td>45.342</td>
+            </tr>
+            <tr>
+                <td>Araci</td>
+                <td>62.942</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>44.3424.392</td>
+            </tr>
+            <tr>
+                <td>Tucano</td>
+                <td>45.342</td>
+            </tr>
+            <tr>
+                <td>Araci</td>
+                <td>62.942</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">Total Habitantes:</th>
+                <td>0000</td>
+            </tr>
+
+        </tfoot>        
+    </table>
+
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, enim magni? Amet provident quos minus esse deserunt perspiciatis ducimus consectetur ipsa aperiam sequi dicta mollitia quidem, quam modi eveniet quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur atque corporis quaerat laudantium possimus. Quos impedit dignissimos sed repellat earum nam dicta, laboriosam voluptates suscipit iure temporibus maxime sequi quia.lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus alias perspiciatis eius sed quaerat ab explicabo qui nulla, suscipit dolorem provident exercitationem maiores praesentium accusamus optio libero incidunt rerum doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quis fuga animi dolorum vitae tempora! Iste molestias ex sunt libero fuga ea, quidem quam ducimus, consequuntur aut a rerum similique!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, enim magni? Amet provident quos minus esse deserunt perspiciatis ducimus consectetur ipsa aperiam sequi dicta mollitia quidem, quam modi eveniet quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur atque corporis quaerat laudantium possimus. Quos impedit dignissimos sed repellat earum nam dicta, laboriosam voluptates suscipit iure temporibus maxime sequi quia.lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus alias perspiciatis eius sed quaerat ab explicabo qui nulla, suscipit dolorem provident exercitationem maiores praesentium accusamus optio libero incidunt rerum doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quis fuga animi dolorum vitae tempora! Iste molestias ex sunt libero fuga ea, quidem quam ducimus, consequuntur aut a rerum similique!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, enim magni? Amet provident quos minus esse deserunt perspiciatis ducimus consectetur ipsa aperiam sequi dicta mollitia quidem, quam modi eveniet quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur atque corporis quaerat laudantium possimus. Quos impedit dignissimos sed repellat earum nam dicta, laboriosam voluptates suscipit iure temporibus maxime sequi quia.lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus alias perspiciatis eius sed quaerat ab explicabo qui nulla, suscipit dolorem provident exercitationem maiores praesentium accusamus optio libero incidunt rerum doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quis fuga animi dolorum vitae tempora! Iste molestias ex sunt libero fuga ea, quidem quam ducimus, consequuntur aut a rerum similique!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, enim magni? Amet provident quos minus esse deserunt perspiciatis ducimus consectetur ipsa aperiam sequi dicta mollitia quidem, quam modi eveniet quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur atque corporis quaerat laudantium possimus. Quos impedit dignissimos sed repellat earum nam dicta, laboriosam voluptates suscipit iure temporibus maxime sequi quia.lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus alias perspiciatis eius sed quaerat ab explicabo qui nulla, suscipit dolorem provident exercitationem maiores praesentium accusamus optio libero incidunt rerum doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quis fuga animi dolorum vitae tempora! Iste molestias ex sunt libero fuga ea, quidem quam ducimus, consequuntur aut a rerum similique!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, enim magni? Amet provident quos minus esse deserunt perspiciatis ducimus consectetur ipsa aperiam sequi dicta mollitia quidem, quam modi eveniet quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur atque corporis quaerat laudantium possimus. Quos impedit dignissimos sed repellat earum nam dicta, laboriosam voluptates suscipit iure temporibus maxime sequi quia.lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus alias perspiciatis eius sed quaerat ab explicabo qui nulla, suscipit dolorem provident exercitationem maiores praesentium accusamus optio libero incidunt rerum doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quis fuga animi dolorum vitae tempora! Iste molestias ex sunt libero fuga ea, quidem quam ducimus, consequuntur aut a rerum similique!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, enim magni? Amet provident quos minus esse deserunt perspiciatis ducimus consectetur ipsa aperiam sequi dicta mollitia quidem, quam modi eveniet quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur atque corporis quaerat laudantium possimus. Quos impedit dignissimos sed repellat earum nam dicta, laboriosam voluptates suscipit iure temporibus maxime sequi quia.lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus alias perspiciatis eius sed quaerat ab explicabo qui nulla, suscipit dolorem provident exercitationem maiores praesentium accusamus optio libero incidunt rerum doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quis fuga animi dolorum vitae tempora! Iste molestias ex sunt libero fuga ea, quidem quam ducimus, consequuntur aut a rerum similique!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, enim magni? Amet provident quos minus esse deserunt perspiciatis ducimus consectetur ipsa aperiam sequi dicta mollitia quidem, quam modi eveniet quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur atque corporis quaerat laudantium possimus. Quos impedit dignissimos sed repellat earum nam dicta, laboriosam voluptates suscipit iure temporibus maxime sequi quia.lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus alias perspiciatis eius sed quaerat ab explicabo qui nulla, suscipit dolorem provident exercitationem maiores praesentium accusamus optio libero incidunt rerum doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quis fuga animi dolorum vitae tempora! Iste molestias ex sunt libero fuga ea, quidem quam ducimus, consequuntur aut a rerum similique!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, enim magni? Amet provident quos minus esse deserunt perspiciatis ducimus consectetur ipsa aperiam sequi dicta mollitia quidem, quam modi eveniet quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur atque corporis quaerat laudantium possimus. Quos impedit dignissimos sed repellat earum nam dicta, laboriosam voluptates suscipit iure temporibus maxime sequi quia.lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus alias perspiciatis eius sed quaerat ab explicabo qui nulla, suscipit dolorem provident exercitationem maiores praesentium accusamus optio libero incidunt rerum doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quis fuga animi dolorum vitae tempora! Iste molestias ex sunt libero fuga ea, quidem quam ducimus, consequuntur aut a rerum similique!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, enim magni? Amet provident quos minus esse deserunt perspiciatis ducimus consectetur ipsa aperiam sequi dicta mollitia quidem, quam modi eveniet quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur atque corporis quaerat laudantium possimus. Quos impedit dignissimos sed repellat earum nam dicta, laboriosam voluptates suscipit iure temporibus maxime sequi quia.lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus alias perspiciatis eius sed quaerat ab explicabo qui nulla, suscipit dolorem provident exercitationem maiores praesentium accusamus optio libero incidunt rerum doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quis fuga animi dolorum vitae tempora! Iste molestias ex sunt libero fuga ea, quidem quam ducimus, consequuntur aut a rerum similique!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, enim magni? Amet provident quos minus esse deserunt perspiciatis ducimus consectetur ipsa aperiam sequi dicta mollitia quidem, quam modi eveniet quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur atque corporis quaerat laudantium possimus. Quos impedit dignissimos sed repellat earum nam dicta, laboriosam voluptates suscipit iure temporibus maxime sequi quia.lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus alias perspiciatis eius sed quaerat ab explicabo qui nulla, suscipit dolorem provident exercitationem maiores praesentium accusamus optio libero incidunt rerum doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quis fuga animi dolorum vitae tempora! Iste molestias ex sunt libero fuga ea, quidem quam ducimus, consequuntur aut a rerum similique!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, enim magni? Amet provident quos minus esse deserunt perspiciatis ducimus consectetur ipsa aperiam sequi dicta mollitia quidem, quam modi eveniet quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur atque corporis quaerat laudantium possimus. Quos impedit dignissimos sed repellat earum nam dicta, laboriosam voluptates suscipit iure temporibus maxime sequi quia.lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus alias perspiciatis eius sed quaerat ab explicabo qui nulla, suscipit dolorem provident exercitationem maiores praesentium accusamus optio libero incidunt rerum doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quis fuga animi dolorum vitae tempora! Iste molestias ex sunt libero fuga ea, quidem quam ducimus, consequuntur aut a rerum similique!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, enim magni? Amet provident quos minus esse deserunt perspiciatis ducimus consectetur ipsa aperiam sequi dicta mollitia quidem, quam modi eveniet quod? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur atque corporis quaerat laudantium possimus. Quos impedit dignissimos sed repellat earum nam dicta, laboriosam voluptates suscipit iure temporibus maxime sequi quia.lor Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus alias perspiciatis eius sed quaerat ab explicabo qui nulla, suscipit dolorem provident exercitationem maiores praesentium accusamus optio libero incidunt rerum doloribus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quis fuga animi dolorum vitae tempora! Iste molestias ex sunt libero fuga ea, quidem quam ducimus, consequuntur aut a rerum similique!</p>
+    
+</body>
+</html>

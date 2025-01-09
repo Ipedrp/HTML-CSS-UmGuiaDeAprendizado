@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+</head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    table{
+        border-collapse: collapse;
+        width: 400px;
+    }
+
+    th, td{
+        border: 1px solid black;
+        text-align: center;
+        padding: 10px;
+    }
+</style>
+<body>
+    <h1>Tabela Completa</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th scope="col">Grupos</th>
+                <th scope="col">Nomes</th>
+                <th scope="colgroup" colspan="3">Filmes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row" rowspan="3">Mulheres</th>
+                <td>Ana Maria Santos</td>
+                <td>Alien</td>
+                <td>Rambo</td>
+                <td>Vingadores</td>
+            </tr>
+            <tr>
+                <td>Bianca Barcelar</td>
+                <td>Et</td>
+                <td>Arquivo x</td>
+                <td>Deadpool</td>
+            </tr>
+            <tr>
+                <td>Cláudia Melo</td>
+                <td>Hulk</td>
+                <td>Batman</td>
+                <td>Matrix</td>
+            </tr>   
+            <tr>
+                <th scope="rowgroup" rowspan="3">Homens</th>
+                <td>Ricardo Lima</td>
+                <td>Gladiador</td>
+                <td>Origem</td>
+                <td>Casa Grade</td>
+            </tr>
+            <tr>
+                <td>Bruno Martins</td>
+                <td>Taxi Driver</td>
+                <td>Mario</td>
+                <td>X-Man</td>
+            </tr>
+            <tr>
+                <td>Alex Souza</td>
+                <td>Big Hero</td>
+                <td>Missão Impossível</td>
+                <td>Cinderela</td>
+            </tr> 
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4" scope="row">
+                    Total
+                </th>
+                <td>1000</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>
