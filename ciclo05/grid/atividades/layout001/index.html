@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de layout - 001</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+
+    div.grid-container {
+        display: grid;
+        column-gap: 4px;
+        row-gap: 4px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 100px 2fr 100px 100px;
+        grid-template-areas:
+            "header     header      header      header      header      header"
+            ".          main        main        main        sidebar          ."
+            " .         aside-one   aside-one   aside-two   aside-two        ."
+            "footer     footer      footer      footer      footer      footer"
+        ;
+        height: 100vh;
+        margin: 0 auto;
+        max-width: 1200px;
+    }   
+
+    div.grid-container>header {
+        background-color: lightskyblue;
+        grid-area: header;
+    }
+
+    div.grid-container>main {
+        background-color: orangered;
+        grid-area: main;
+    }
+
+    div.grid-container>aside#sidebar {
+        background-color: blue;
+        grid-area: sidebar;
+    }
+
+    div.grid-container>aside#aside1 {
+        background-color: brown;
+        grid-area: aside-one;
+    }
+
+    div.grid-container>aside#aside2 {
+        background-color: brown;
+        grid-area: aside-two;
+    }
+
+    div.grid-container>footer {
+        background-color: lightskyblue;
+        grid-area: footer;
+    }
+
+    @media screen and (max-width: 678px) {
+    div.grid-container {
+        display: grid;
+        column-gap: .5px;
+        row-gap: 2px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 4fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "aside-one"
+            "aside-two"
+            "footer";
+        height: 100vh;
+    }
+}
+
+</style>
+
+<body>
+    <div class="grid-container">
+        <header>HEADER</header>
+        <main>MAIN</main>
+        <aside id="sidebar">SIDEBAR</aside>
+        <aside id="aside1">ASIDE</aside>
+        <aside id="aside2">ASIDE</aside>
+        <footer>FOOTER</footer>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout - Nomes de linha</title>
+</head>
+<style>
+    div.wrapper {
+        display: grid;
+        grid-template-columns: [site-start] 1fr [content-start] repeat(2, 1fr) [site-end];
+        grid-template-rows: [site-top] 200px [content-top] 200px [content-bottom] 200px [site-bottom];
+        grid-gap: 4px;
+        grid-auto-rows: 200px;
+
+    }
+
+    div.wrapper>* {
+        background-color: royalblue;
+        padding: 1rem;
+    }
+
+    div.wrapper>*:nth-child(even) {
+        background-color: skyblue;
+    }
+
+    header {
+        grid-column: site-start / site-end;
+    }
+
+    main {
+        grid-column-start: content-start;
+        grid-row-start: content-top;
+    }
+
+    aside {
+        grid-row-start: content-bottom;
+    }
+
+    footer {
+        grid-column: site-start / site-end;
+    }
+
+    @media screen and (max-width: 678px) {
+
+        header {
+            grid-column-start: site-start;
+        }
+
+        main {
+            grid-column: site-start / site-end;
+        }
+
+        aside {
+            grid-column: site-start / site-end;
+        }
+
+        footer {
+            grid-column-start: site-start;
+        }
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <header>Header</header>
+        <main>Main</main>
+        <aside>Aside</aside>
+        <footer>Footer</footer>
+    </div>
+
+</body>
+
+</html>

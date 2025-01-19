@@ -1,4 +1,28 @@
-# Flexbox
+- [1. Flexbox](#1-flexbox)
+  - [1.1. Direções e Eixos](#11-direções-e-eixos)
+  - [1.2. Empacotamento e Fluxo](#12-empacotamento-e-fluxo)
+  - [1.3. Alinhamento dos Eixos](#13-alinhamento-dos-eixos)
+  - [1.4. Centralização Absoluta](#14-centralização-absoluta)
+  - [1.5. Alinhamento de Conteúdo Empacotado](#15-alinhamento-de-conteúdo-empacotado)
+  - [1.6. Anatomia dos Itens Flexbox](#16-anatomia-dos-itens-flexbox)
+  - [1.7. Propriedade `flex-basis`](#17-propriedade-flex-basis)
+  - [1.8. Controle do Tamanho de Itens Flexíveis](#18-controle-do-tamanho-de-itens-flexíveis)
+  - [1.9. Propriedade `flex`](#19-propriedade-flex)
+- [2. CSS Grid](#2-css-grid)
+  - [2.1. Terminologias do CSS Grid](#21-terminologias-do-css-grid)
+  - [2.2. CSS Grid x Flexbox](#22-css-grid-x-flexbox)
+  - [2.3. Propriedades Básicas](#23-propriedades-básicas)
+  - [2.4. Grid Explícita vs. Implícita](#24-grid-explícita-vs-implícita)
+  - [2.5. Funções Avançadas](#25-funções-avançadas)
+  - [2.6. Unidade `fr`](#26-unidade-fr)
+  - [2.7. Alinhamento](#27-alinhamento)
+  - [2.8. Ocupando Espaços](#28-ocupando-espaços)
+  - [2.9. Sobreposição](#29-sobreposição)
+  - [2.10. Áreas Nomeadas no CSS Grid](#210-áreas-nomeadas-no-css-grid)
+  - [2.11. `auto-fill` e `auto-fit`](#211-auto-fill-e-auto-fit)
+  - [2.12. Linhas Nomeadas](#212-linhas-nomeadas)
+
+# 1. Flexbox
 
 - O Flexbox **`(Flexible Box Layout)`** é um módulo de layout CSS
   
@@ -15,7 +39,7 @@
   
     - `Cross Axis` (eixo transversal): Perpendicular ao eixo principal.
   
-## Direções e Eixos
+## 1.1. Direções e Eixos
 
 - A propriedade **`flex-direction`** define o eixo principal (main-axis) do layout:
 
@@ -55,7 +79,7 @@
   
     ![Direcoes e Eixos](/img/devices-direction.png)
 
-## Empacotamento e Fluxo
+## 1.2. Empacotamento e Fluxo
 
 - A propriedade **`flex-wrap`** controla o comportamento de itens que ultrapassam o espaço disponível no contêiner:
 
@@ -80,22 +104,22 @@
 
   - A combinação de **`flex-direction`** e **`flex-wrap`** é definida com **`flex-flow`**:
 
-- Exemplo de Uso:
-    ```css
-    .container {
+  - Exemplo de Uso:
+      ```css
+      .container {
 
-        display: flex;
-        flex-flow: row nowrap;
-    
-    }
-    ```
-- Mais Exemplo:
-    - Antes da quebra
-    ![Flex-wrap](/img/flex-wrap-before.png)
-    - Depois da quebra
-    ![Flex-wrap](/img/flex-wrap-after.png)
+          display: flex;
+          flex-flow: row nowrap;
+      
+      }
+      ```
+  - Mais Exemplo:
+      - Antes da quebra
+      ![Flex-wrap](/img/flex-wrap-before.png)
+      - Depois da quebra
+      ![Flex-wrap](/img/flex-wrap-after.png)
 
-## Alinhamento dos Eixos
+## 1.3. Alinhamento dos Eixos
 
 - **`Main Axis`** (Eixo Principal)
 
@@ -153,7 +177,7 @@
     - `flex-direction`: row
     ![Flex-wrap](/img//align-itens.png)
 
-## Centralização Absoluta
+## 1.4. Centralização Absoluta
 
 - Combine `justify-content`: center e align-items: center para centralizar itens em ambas as direções
 - Exemplo de Uso:
@@ -166,7 +190,7 @@
         
     }
     ```
-## Alinhamento de Conteúdo Empacotado
+## 1.5. Alinhamento de Conteúdo Empacotado
 
 - A propriedade **`align-content`** alinha várias linhas no eixo transversal (cross-axis):
 
@@ -192,7 +216,7 @@
             align-content: space-around;
         }
         ```
-## Anatomia dos Itens Flexbox
+## 1.6. Anatomia dos Itens Flexbox
 
 - Propriedade **`order`**
 
@@ -241,7 +265,7 @@
     
     ![Align self](/img/align-self.png)
 
-## Propriedade flex-basis
+## 1.7. Propriedade `flex-basis`
 
 - Controla o tamanho inicial de um item:
 
@@ -267,7 +291,7 @@
     
     ![Align self](/img/basis.png)
 
-## Controle do Tamanho de Itens Flexíveis
+## 1.8. Controle do Tamanho de Itens Flexíveis
 
 - Propriedades
 
@@ -304,7 +328,7 @@
 
     }
     ```
-## Propriedade `flex`
+## 1.9. Propriedade `flex`
 
 - Agrupa as propriedades `flex-grow`, `flex-shrink` e `flex-basis`:
 - Exemplo de Uso:
@@ -343,154 +367,379 @@
             
   ```
 
-<!-- felx box, introducao, direcoes e eixos, empacotamento e fluxo, Alinhamento dos Eixos, centralização absoluta, alinhamento de conteudo empacotado, anatomia dos itens flexbox, propriedade flex-baisis, controle do tamanho de itens flexiveis, propriedade flex -->
+# 2. CSS Grid
+- CSS Grid é um sistema de layout poderoso que permite criar estruturas complexas e responsivas de forma simples e eficiente.
+
+## 2.1. Terminologias do CSS Grid
+
+- **Grid Container**: O elemento onde o Grid é definido. Contém os **grid-items**.
+- **Grid Item**: Os elementos filhos diretos do grid container.
+- **Grid Line**: Linhas de grid (horizontais e verticais) que dividem o container em áreas.
+- **Grid Track**: O espaço entre duas linhas de grid consecutivas.
+- **Grid Area**: Uma ou mais células do grid ocupadas por um item.
+- **Grid Gap**: O espaçamento entre linhas e colunas.
+- **Grid Aninhado**: Um grid dentro de outro grid.
+
+## 2.2. CSS Grid x Flexbox
+
+- O CSS Grid não substitui o Flexbox. Ambos têm propósitos diferentes:
+  - **Flexbox**: Ideal para layouts unidimensionais (linha ou coluna).
+  - **Grid**: Melhor para layouts bidimensionais (linhas e colunas).
 
 
-<!-- 
-    Direções e Eixos 
-    flex-direction: row -> main-axis vai da esqueda para direita e o cross-axis vai de cima para baixo.
-    flex-direction: row-reverse ->  main-axis vai da direita para esquerda e o cross-axis vai de cima para baixo.
-    flex-direction: column -> main-axis vai de cima para baixo e o cross-axis da esquerda para direita.
-    flex-direction: column-reverse -> main-axis vai de baixo para cima e o cross-axis da esquerda para direita.
 
-    main-axis:
-        main-start
-        main-end
-    coss-axis:
-        cross-start
-        cross-end
--->
+## 2.3. Propriedades Básicas
 
-<!-- 
-    Empacotamento e fluxo - Quebra do elemnto pai.
-    flex-wrap: nowrap -> não encpsule, nao empacote.
-    flex-wrap: wrap -> Quando o elemento pai diminui, a caixa que esta dentro, vai seguir a direcao do cross-axis.
-    flex-wrap: wrap-reverse -> Quando o elemento pai diminui, a caixa que esta dentro, vai vai seguir a direcao contrario do cross-axis.
+- Definição de Colunas e Linhas
+  
+    - `grid-template-columns`: Define o número de colunas e a largura de cada uma no grid.
 
-    SHORTHANDS PARA FLEX-DIRECTION E FLEX-WRAP:
-        flex-direction: row;
-        flex-wrap: nowrap;  
-        flex-flow: row nowrap;
- -->
+    - `grid-template-rows`: Define o número de linhas e a altura de cada uma no grid.
+      - Exemplo de Uso:
+          ```css
+          .grid {
+              display: grid;
+              grid-template-columns: 50% 200px 200px; /* 3 colunas: 50% da largura, 200px, 200px */
+              grid-template-rows: 200px 200px 200px; /* 3 linhas, cada uma com 200px */
+          }
+          ```
+- Espaçamentos
+  - `column-gap`: Espaçamento entre colunas.
+  - `row-gap`: Espaçamento entre linhas.
+  - `gap`: Espaçamento geral (colunas e linhas).
+    - Exemplo de Uso:
+        ```css
+        .grid {
+            column-gap: 30px;
+            row-gap: 30px;
+            gap: 40px;
+        }
+        ```
 
-<!--
-    Alinhamento dos Eixos
-    Sempre no sentido do main-axis
-        justify-content: flex-start -> o primeiro item ou seja, o primeiro filho ficara grudado ao main-star, e caso exista espaco livre, ficara no final, perto do main-end.
-        justify-content: flex-end o último item ou seja, o primierultimoo filho ficara grudado ao main-end, e caso exista espaco livre, ficara no inicio, perto do main-start.
-        justify-content: center -> coloca todos os item no centro. no meio do main-axis. e os espacoes seram distribuidos iguais no main-start e main-end.
-        justify-content: space-between - > coloca o primeiro item proximo ao main-star e o ultimo item proximo ao main-end, os itens restantes ficaram distribuindo por igual.
-        justify-content: space-evenly - >  coloca o primeiro item proximo ao main-star e o ultimo item proximo ao main-end, mas nao grudam, ficam com um pequeno espaco os itens restantes ficaram distribuindo por igual.
-        justify-content: space-around - >  coloca entre cada item um espaco antes e depois. Então, não fica colado no main-start e no main-end.
-    Sempre no sentido do cross-axis
-        align-items: stretch -> estica os items.
-        align-items: flex-start -> coloca os item no inicio, colado com o cross-start.
-        align-items: flex-end -> coloca os item no final, colado com o cross-end.
-        align-items: center -> coloca os item no centro, distribuindo o espaco vazio par ao cross-start e cross-end.
--->
+## 2.4. Grid Explícita vs. Implícita
 
-<!--
-    Centralização absoluta
-    justify-content: center
-    align-items: center 
- -->
+- **Grid Explícita**: Linhas e colunas definidas manualmente.
+  - Exemplo de Uso:
+    ```css
+    .grid{
+        grid-template-rows: 200px 200px;/*Duas linhas com 200px de altura cada*/
+        grid-template-columns: 50% 200px 200px; /* 3 colunas: 50% da largura, 200px, 200px */
+    }
+    ```
+- **Grid Implícita**: Linhas e colunas criadas automaticamente.
+  - Exemplo de Uso:
+    ```css
+    .grid{
+        grid-auto-rows: 70px; /* Altura padrão para linhas geradas automaticamente */
+        grid-auto-columns: 100px; /* Largura padrão para colunas geradas automaticamente */
+    }
+    ```
 
-<!-- 
-    Alinhamento de conteudo empacotado
-    align-content: Alinha os elementos no eixo trasnversal (cross-axis) qunado estao empacotados
-        align-content: stretch -> valor padrao, vai esticar o item
-        align-content: flex-start -> coloca todos os elementos em cima, grudado com o cross-start.
-        align-content: flex-end -> coloca todos os elementos embaixo, grudado com o cross-end.
-        align-content: center -> coloca todos os elementos no centro, deixando espaçoes em branco no cross-start e no cross-end.
-        align-content: space-between -> coloca os items em cima, no cross-start e embaixo no cross-end, deixando espaços no meio.
-        align-content: space-evenly -> coloca os items proximo, ao cross-start e proximo ao cross-end, deixando espaços no antes, no meio e no final.
-        align-content: space-around -> cria um caixa imaginaria e coloca os itens centalizados, com espaco em cima e embaixo.
--->
+## 2.5. Funções Avançadas
 
-<!-- 
-    Anatomia dos itens flexbox - Trabalha com o flex-itens (elemento filho).
-        order: 0 (padrao). 
-            Para modificar a ordem dos elementos
-                sem orderm: 0 0 0 0
-                com ordem: -2 0 7 9
-        align-self: Alinhamento dos itens, cada um pode ter um alinhamento diferente, funciona diretamente ao cross-axis.
-            align-self: auto ou inherit(herdado) -> pega o alinhamento do pai.
-            align-self: flex-start -> alinha ao inicio, proximo ao cross-start.
-            align-self: flex-end -> alinha ao final, proximo ao cross-end.
-            align-self: center -> alinha ao centro.
-            align-self: strech -> estica os elementos.
--->
-<!-- 
-    Propriedade flex-baisis - Trabalha com o flex-itens (elemento filho).
-        flex-basis -> Controlar o tamanho
-        flex-basis: auto -> o tamanho do elemento é ditado pelo tamanho do conteudo.
-        flex-basis: "algum valor" -> assim determina o tamanho, mas ele pode ser diminuido, assim o conteudo do item, vai se quebrando. 
+- `repeat()` e `minmax()`
+
+  - `repeat()`: Define múltiplas colunas/linhas com valores repetidos.
+    - Exemplo de Uso:
     
- -->
+      ```css
+      .grid{
+        grid-template-columns: repeat(4, 200px); /* 4 colunas de 200px cada */
+      }
+      ```
 
- <!-- 
-    Controle do tamanho de itens flexiveis - Trabalha com o flex-itens (elemento filho).
-        container-pai: 550px
-        flex-basis: 150px
-        
-        flex-shrink: 1 (padrao) - significa que o elemento pode encolher
-        flex-grow: 1 - significa que o elemento pode crescer
+  - `minmax()`: Define limites mínimo e máximo para colunas/linhas.
+    - Exemplo de Uso:
+      ```css
+      .grid{
+        grid-template-columns: minmax(200px, 50%) 200px 200px;
+      }
+      ```
+## 2.6. Unidade `fr`
 
-        flex-grow: 0 (padrao) - significa que o elemento não pode crescer
-        flex-shrink: 0 - significa que o elemento não pode encolher
+- `fr` (fração) distribui espaço proporcionalmente.
+  - Exemplo de Uso:
+      ```css
+      .grid{
+        grid-template-columns: 1fr 2fr 1fr; /* 3 colunas, a do meio ocupa o dobro do espaço */
+      }
+      ```
+## 2.7. Alinhamento
 
-        trabalhando os tres valores: flex-basis, flex-grow e flex-shirink
+- No CSS Grid, o alinhamento é controlado em dois eixos principais:
+  - **Eixo vertical**: alinhamento ao longo do eixo das colunas (eixo bloco no CSS moderno).  
+  - **Eixo horizontal**: alinhamento ao longo do eixo das linhas (eixo inline no CSS moderno).  
 
-        flex-basis: 150px;
-        flex-grow: 0;
-        flex-shrink: 1;
+- O alinhamento pode ser aplicado ao **Grid Container** (afeta todos os itens) ou ao **Grid Item** (de forma individual).
 
-        flex-basis: 150px;
-        flex-grow: 2;
-        flex-shrink: 0;
+- **No Grid Container**
 
-        flex-basis: 150px;
-        flex-grow: 1;
-        flex-shrink: 2;
-  -->
+    - **Alinhamento Vertical (Eixo das Colunas)**:
+      - Controlado com a propriedade `align-items`:
+      - Exemplo de Uso:
+        ```css
+        .grid-container {
+            align-items: start;   /* Alinha os itens no topo */
+            align-items: end;     /* Alinha os itens na parte inferior */
+            align-items: center;  /* Alinha os itens ao centro verticalmente */
+            align-items: stretch; /* (Padrão) Estica os itens para ocupar o espaço total */
+        }
+        ```
 
-  <!-- 
-    Propriedade flex - Trabalha com o flex-itens (elemento filho).
+    - **Alinhamento Horizontal (Eixo das Linhas)**:
+  
+      - Controlado com a propriedade `justify-items`:
+      - Exemplo de Uso:
+        ```css
+        .grid-container {
+              justify-items: start;   /* Alinha os itens no início */
+              justify-items: end;     /* Alinha os itens no final */
+              justify-items: center;  /* Alinha os itens ao centro horizontalmente */
+              justify-items: stretch; /* (Padrão) Estica os itens para ocupar o espaço total */
+          }
+        ```
 
-        flex = flex-grow + flex-shrink + flex-basis
+- **No Grid Item**
+- Essas propriedades ajustam o alinhamento de um item específico dentro do grid.
+  - **Alinhamento Vertical (Eixo das Colunas)**
+    - Controlado com a propriedade `align-self`:
+    - Exemplo de Uso:
+        ```css
+        .grid-item {
+              align-self: start;   /* Alinha o item no topo */
+              align-self: end;     /* Alinha o item na parte inferior */
+              align-self: center;  /* Alinha o item ao centro verticalmente */
+              align-self: stretch; /* (Padrão) Estica o item para ocupar o espaço total */
+          }
+        ```
+  - **Alinhamento Horizontal (Eixo das Linhas)**
+    - Controlado com a propriedade `justify-self`:
+    - Exemplo de Uso:
+        ```css
+        .grid-item {
+            justify-self: start;   /* Alinha o item no início */
+            justify-self: end;     /* Alinha o item no final */
+            justify-self: center;  /* Alinha o item ao centro horizontalmente */
+            justify-self: stretch; /* (Padrão) Estica o item para ocupar o espaço total */
+        }
+        ```
+## 2.8. Ocupando Espaços
+- É possível definir quantas colunas ou linhas um **Grid Item** deve ocupar, utilizando propriedades específicas. 
+- Essas propriedades podem ser declaradas de forma separada:
+  - `grid-column-start`
+  - `grid-column-end`
+  - `grid-row-start`
+  - `grid-row-end`
+- Ou através de suas abreviações:
+  - `grid-column` 
+  - `grid-row`
 
-        flex-basis: 150px;
-        flex-grow: 0;
-        flex-shrink: 1; 
+- **Colunas**
+  - **Propriedades Individuais**
+    - **`grid-column-start`**: Define onde o item inicia na grade de colunas.
+    - **`grid-column-end`**: Define onde o item termina na grade de colunas.
 
-            passa a ficar asssim: flex: 0 1 150px
-        
-        flex-basis: 150px;
-        flex-grow: 2;
-        flex-shrink: 0;
+    - Exemplo de Uso:
+        ```css
+        .grid-item {
+            grid-column-start: 1; /* Inicia na coluna 1 */
+            grid-column-end: 3;   /* Termina na coluna 3 */
+        }
+        ```
+  - **Propriedade Combinada**
+    - **`grid-column`**: Combina o início e o final da ocupação em uma única declaração.
+    - Sintaxe: 
+      - `grid-column`: [início] / [fim].
+      - `span`: Pode ser usado para definir o número de colunas que o item deve ocupar, a partir da coluna inicial.
+      - Exemplo de Uso:
+          ```css
+          .grid-item {
+              grid-column: 1 / 3;      /* Ocupa da coluna 1 até a 3 */
+              grid-column: 1 / span 2; /* Ocupa 2 colunas, começando na 1 */
+          }
+          ```
 
-            passa a ficar asssim: flex: 2 0 150px
+-  **Linhas**
+-  **Propriedades Individuais**
+   - **`grid-row-start`**: Define onde o item inicia na grade de linhas.
+   - **`grid-row-end`**: Define onde o item termina na grade de linhas.
 
-        flex-basis: 150px;
-        flex-grow: 1;
-        flex-shrink: 2;
+   - Exemplo de Uso:   
+       ```css
+       .grid-item {
+            grid-row-start: 1; /* Inicia na linha 1 */
+            grid-row-end: 4;   /* Termina na linha 4 */
+       }
+       ```
+   - Propriedade Combinada
+    - **`grid-row`**: Combina o início e o final da ocupação em uma única declaração.
+    - Sintaxe: 
+      - `grid-row`: [início] / [fim].
+      - `span`: Pode ser usado para definir o número de linhas que o item deve ocupar, a partir da linha inicial.
+   - Exemplo de Uso:
+        ```css
+        .grid-item {
+            grid-column: 1 / 3;      /* Ocupa da coluna 1 até a 3 */
+            grid-column: 1 / span 2; /* Ocupa 2 colunas, começando na 1 */
+        }
+        ``` 
 
-            passa a ficar asssim: flex: 1 2 150px
+## 2.9. Sobreposição
 
+- Itens podem se sobrepor utilizando as mesmas áreas de grid:
+  - Exemplo de Uso:
 
-        mais simplificações:
-            flex: 0 1 auto
-            flex: initial
+    ```css
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .item1 {
+        grid-row: 1 / span 2;
+        grid-column: 1 / span 2;
+    }
+    .item2 {
+        grid-row: 2 / span 2;
+        grid-column: 1 / span 3;
+    }
+    ```
+## 2.10. Áreas Nomeadas no CSS Grid
 
-            flex: 0 0 auto
-            flex: none
+- O CSS Grid permite criar layouts organizados e intuitivos utilizando **áreas nomeadas**. 
+- Essa funcionalidade é controlada pelas propriedades `grid-template-areas` e `grid-area`.
 
-            flex: 1 1 auto
-            flex: auto
+- **Propriedades e Funções**
 
-            flex: 3 1 auto
-            flex: 3
+    - **`grid-template-areas`**
+       - Declarada no **Grid Container**.
+       - Define as áreas do layout com nomes atribuídos a grupos de células.
+       - Cada string dentro da propriedade corresponde a uma linha da grade.
+       - Nomes repetidos em células adjacentes indicam que essas células pertencem à mesma área.
+       - Espaços vazios podem ser indicados com o caractere `.`.
 
+    - **`grid-area`**
+       - Declarada no **Grid Item**.
+       - Relaciona o item com uma área nomeada definida no `grid-template-areas`.
 
-    
-   -->
+    - **Exemplo de Uso**
+
+      - **No Grid Container**
+          ```css
+          .grid-container {
+              display: grid;
+              grid-template-columns: 1fr 2fr; /* Define duas colunas, a primeira menor */
+              grid-template-rows: auto auto auto; /* Três linhas automáticas */
+              grid-template-areas: 
+                  "header header"    /* Primeira linha: header ocupa ambas as colunas */
+                  "main sidebar"     /* Segunda linha: main e sidebar dividem o espaço */
+                  "footer footer";   /* Terceira linha: footer ocupa ambas as colunas */
+          }
+          ```
+      - **No Grid Item**
+          ```css
+              header {
+                  grid-area: header; /* Vincula este item à área 'header' */
+              }
+
+              main {
+                  grid-area: main; /* Vincula este item à área 'main' */
+              }
+
+              .sidebar {
+                  grid-area: sidebar; /* Vincula este item à área 'sidebar' */
+              }
+
+              footer {
+                  grid-area: footer; /* Vincula este item à área 'footer' */
+              }
+              
+          ```
+- **Espaços Vazios na Grade**
+  - Para deixar espaços vazios no layout, utilize o caractere `.` em vez de um nome de área.
+  - Exemplo de Uso:
+    ```css
+    .grid-container {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: auto auto;
+          grid-template-areas: 
+              "header header header"    /* Header ocupa toda a linha */
+              "main     .    sidebar"   /* Espaço vazio no meio */
+              "footer footer footer";   /* Footer ocupa toda a linha */
+    }
+    ```
+
+## 2.11. `auto-fill` e `auto-fit`
+
+- `auto-fill`: Adiciona colunas extras mesmo que estejam vazias.
+- `auto-fit`: Ajusta o número de colunas ao tamanho disponível.
+- Exemplo de Uso:
+    ```css
+    .grid-container{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    ```
+
+<!-- ## 2.12. Linhas Nomeadas
+- Exemplo de Uso:
+
+    ```css
+    .grid-container {
+        grid-template-columns: [start] 1fr [middle] 1fr [end];
+    }
+    .grid-item {
+        grid-column: start / middle;
+    }
+    ``` -->
+## 2.12. Linhas Nomeadas 
+
+- O CSS Grid permite atribuir **nomes às linhas** (tanto de colunas quanto de linhas) para tornar o layout mais descritivo e facilitar o posicionamento dos itens.
+
+- **Propriedades e Funções**
+
+  - **Linhas Nomeadas**
+
+     - Declaradas no **Grid Container**.
+     - Os nomes das linhas são definidos entre colchetes `[]` na propriedade `grid-template-columns` ou `grid-template-rows`.
+     - Esses nomes podem ser usados no posicionamento dos itens para especificar onde começar e terminar.
+
+  - **Utilizando Nomes no Posicionamento**
+
+     - Os itens utilizam os nomes das linhas com as propriedades `grid-column` e `grid-row`.
+
+- **Exemplo de Uso**
+
+  - **No Grid Container**
+
+    ```css
+    .grid-container {
+        display: grid;
+        grid-template-columns: [start] 1fr [middle] 1fr [end]; /* Define nomes para as linhas de coluna */
+        grid-template-rows: [top] 100px [center] 200px [bottom]; /* Define nomes para as linhas de linha */
+    }
+    ```
+
+  - **No Grid Item**
+  
+      ```css
+      .grid-item {
+              grid-column: start / middle; /* O item ocupa da linha "start" até a linha "middle" na grade de colunas */
+              grid-row: top / center; /* O item ocupa da linha "top" até a linha "center" na grade de linhas */
+          }
+      ```
+- **Nomes de Múltiplas Linhas**
+  
+  - É possível atribuir múltiplos nomes à mesma linha, separando-os por espaços.
+  
+  - Exemplo de Uso:
+    ```css
+    .grid-container {
+        display: grid;
+        grid-template-columns: [col-start primary] 1fr [col-middle secondary] 1fr [col-end];
+    }
+
+    .grid-item {
+        grid-column: primary / secondary; /* Usa os nomes "primary" e "secondary" para posicionamento */
+    }
+
+    ```

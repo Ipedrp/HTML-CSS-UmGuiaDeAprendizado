@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout - Ocupando espaços</title>
+</head>
+<style>
+    div.wrapper{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); 
+        grid-template-rows: repeat(3, minmax(100px, auto));
+        grid-gap: 10px;
+    }
+
+    div.wrapper > div{
+        background-color: royalblue;
+        padding: 1rem;
+    }
+
+    div.wrapper > div:nth-child(even){
+        background-color: skyblue;
+    }
+
+    div.wrapper > div:nth-child(1){
+        /*grid-column-start: 1; /*Determina onde o grid-item vai iniciar*/
+        /*grid-column-end: 3; /*Determina onde o grid-item ira terminar*/
+        grid-column: 1 / span 5;
+        height: 200px;
+    }
+    div.wrapper > div:nth-child(2){
+       
+        grid-column: 1; /*Determina que ira comecar na coluna 1  e o restante sera branco se o seguinte tbm comecar na coluna 1*/
+    }
+    div.wrapper > div:nth-child(3){
+        grid-column: 2 / span 3; 
+    }
+    div.wrapper > div:nth-child(5){
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 678px) {
+        div.wrapper > div:nth-child(odd){
+            grid-column: 1 / -1;
+        }
+        div.wrapper > div:nth-child(even){
+            grid-column: 1 / -1;
+        }
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <div>1</div>
+        <div>2</div>
+        <div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At porro cumque quasi architecto beatae adipisci, eveniet doloremque, velit totam laboriosam neque. Incidunt perspiciatis consequatur delectus adipisci ipsam ex ad sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum commodi a vel asperiores deserunt, quasi neque qui tempora aspernatur, officia, distinctio expedita laboriosam maiores ex sapiente ratione blanditiis. Labore, temporibus!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dicta temporibus ea eius aspernatur eos voluptatibus atque inventore numquam a. Sapiente temporibus quia velit enim aspernatur ipsum soluta doloribus ullam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolorum incidunt tempora neque ullam voluptates quibusdam vitae recusandae autem, voluptate, consectetur animi. Repellendus atque facilis voluptatum nemo. Laudantium, doloribus veritatis.lorem
+            </p>
+        </div>
+        <div>4</div>
+        <div>Footer</div>
+    </div>
+    
+</body>
+</html>
